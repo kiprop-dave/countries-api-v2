@@ -1,0 +1,95 @@
+.container {
+    min-height: 80vh;
+    padding: 0 6rem 4rem 6rem;
+    margin-top: 6rem;
+}   
+
+.nav{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.back{
+    width: 18%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main{
+    margin-top: 2rem;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.flag{
+    border-radius: 5px;
+}
+
+.details{
+    width: 55%;
+    display: grid;
+    grid-template-areas: 'a b'
+                         'c c';
+}
+
+.section1{
+    text-align: start;
+    line-height: 2.5rem;
+    grid-area: a;
+}
+.section1 > h4{
+    font-weight: 500;
+}
+
+.section2{
+    text-align: start;
+    line-height: 2.5rem;
+    margin-right: 0rem;
+    margin-top: 4rem;
+    height: 200px;
+    grid-area: b;
+}
+.section2 > h4{
+    font-weight: 500;
+}
+
+.section3{
+    grid-area: c;
+    text-align: start;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.section3 > h4{
+    font-weight: 500;
+    width: 8rem;
+}
+.span{
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.bordersContainer{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr)); 
+    margin-right: 0; 
+}
+
+.borders{
+    border-radius: var(--br);
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+    margin: 5px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

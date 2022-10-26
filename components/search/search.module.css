@@ -1,0 +1,38 @@
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.searchInput{
+    border: none;
+    height: 100%;
+    width: 35%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+.searchInput:focus{
+    outline: none;
+}
+
+.filterCountries{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.select{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}

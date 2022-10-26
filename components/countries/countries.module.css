@@ -1,0 +1,31 @@
+.container{
+    width: 100%;
+    min-height: 80vh;
+    margin-top: 2rem;
+    display: grid;
+    row-gap: 5rem;
+    column-gap: 5rem;
+    grid-template-columns: repeat(4, minmax(170px, 1fr));  
+}
+
+.country{
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.country:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+.countryflag{
+    border-radius: 0.5rem;
+}
+
+.countrydetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;   
+}
