@@ -23,3 +23,9 @@
     justify-content: space-between;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px){
+    .toggleContainer{
+        width: 20%;
+    }
+}

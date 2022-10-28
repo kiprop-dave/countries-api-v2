@@ -13,6 +13,7 @@ function Country({ country }) {
               src={flags?.png}
               alt="flag"
               className={styles.countryflag}
+              layout={"responsive"}
               width={270}
               height={180}
             />

@@ -79,8 +79,9 @@
 
 .bordersContainer{
     display: grid;
-    grid-template-columns: repeat(3, minmax(120px, 1fr)); 
+    grid-template-columns: repeat(4, minmax(120px, 1fr)); 
     margin-right: 0; 
+    font-size: 14px;
 }
 
 .borders{
@@ -92,4 +93,36 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        padding: 0 2rem 2rem 2rem;
+        width: 100vw;
+    }
+    .back{
+        width: 35%;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .section2{
+        margin-top: 0;
+        height: auto;
+    }
+    .section3{
+        flex-direction: column;
+        height: auto;
+    }
+    .section3 > h4{
+        width: 100%;
+    }
+    .bordersContainer{
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+    }
 }

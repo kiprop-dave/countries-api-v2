@@ -29,7 +29,7 @@ export default function Home({ countries }) {
 
   const filter = (param) => {
     if (param.length) {
-      if (param === "ALL") {
+      if (param === "All") {
         setAllCountries(copy);
       } else {
         const filterResults = copy.filter(
