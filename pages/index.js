@@ -18,6 +18,28 @@ export async function getStaticProps() {
 
 export default function Home({ countries }) {
   const [allCountries, setAllCountries] = useState(countries);
+  const [copy] = useState(countries);
+
+  const search = (param) => {
+    const searchResults = copy.filter((country) =>
+      country.name.common.toLowerCase().includes(param.toLowerCase()),
+    );
+    setAllCountries(searchResults);
+  };
+
+  const filter = (param) => {
+    if (param.length) {
+      if (param === "ALL") {
+        setAllCountries(copy);
+      } else {
+        const filterResults = copy.filter(
+          (country) => country.region === param,
+        );
+        setAllCountries(filterResults);
+      }
+    }
+  };
+
   return (
     <>
       <Head>
@@ -33,7 +55,7 @@ export default function Home({ countries }) {
       </header>
       <div className={styles.container}>
         <nav>
-          <Search />
+          <Search search={search} filter={filter} />
         </nav>
         <main>
           <Countries data={allCountries} />

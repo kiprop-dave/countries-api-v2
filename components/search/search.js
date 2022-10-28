@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/themeProvider";
 import styles from "./search.module.css";
 
-function Search() {
+function Search({ search, filter }) {
   const { isLightMode } = useContext(Context);
 
   const className = isLightMode ? "lightMode" : "darkelements";
@@ -11,13 +11,14 @@ function Search() {
     <div className={`${styles.container} `}>
       <input
         className={`${styles.searchInput} ${className}`}
+        onChange={(e) => search(e.target.value)}
         placeholder="Search for country"
       />
       <div className={`${styles.filterCountries}`}>
         <select
           id="filter"
           // value={filterParam}
-          // onChange={handleFilter}
+          onChange={(e) => filter(e.target.value)}
           name="filter"
           className={`${styles.select} ${className}`}
         >
